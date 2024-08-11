@@ -80,91 +80,9 @@ def  count():
       extra_window.mainloop()
      
       
-      
-      
-      
-        
-def stop():
 
-      extra_window = tk.Toplevel()
-      extra_window.title('stopwatch')
-      extra_window.geometry('800x800')
-      extra_window.config(bg="black")
-      extra_window.resizable(False,False)
-      
-      label1 = tk.Label(extra_window,text="00:00:00",font=("Arial",24),bg="black",fg="purple")
-      label1.place(x=250,y=100)
-      
-      
-      def __init__(self):
-              self.starttime = None
-              self.elapsedtimed =0
-              self.isrunning = False
-      def startwatch(self):
-              if not self.isrunning:
-                  self.starttime= time.time()
-                  self.isrunning = True
-                  print("stopwatch has started")
-      def stopwatch(self):
-              if self.isrunning:
-                  self.elapsedtimed = time.time()
-                  self.isrunning = False
-                  print("stopwatch has stopped")
-                     
-      def resetwatch(self):
-              self.elapsedtimed =0
-              self.isrunning = False
-              print("stopwatch has reset")
-      def logwatchtime(self):
-              totaltime = self.elapsedtimed
-              if self.isrunning:
-                  totaltime +=time.time()-self.starttime 
-              print(f"time :{totaltime :.2f} seconds") 
-                   
-      
-                     
-
-                    
-                
-
-
-  
-      btn = Button(extra_window, text="Start", bd=5, font=("Arial",20),bg="cyan",border=5 ,command=startwatch)
-      btn.place(x=200, y=200)
-      btn = Button(extra_window, text="Stop", bd=5, font=("Arial",20),bg="cyan",border=5 ,command=stopwatch)
-      btn.place(x=300, y=200)
-      btn = Button(extra_window, text="Reset", bd=5, font=("Arial",20),bg="cyan",border=5 ,command=resetwatch)
-      btn.place(x=400, y=200)
-      
       extra_window.mainloop()
     
-
-
-
-
-       
-        
-
-    
-
-
-      
-
-      
-
-      
-def user():
-      extra_window = tk.Toplevel()
-      extra_window.title('user interface')
-      extra_window.geometry('800x800')
-      
-
-def accuracy():
-      extra_window = tk.Toplevel()
-      extra_window.title('accuracy')
-      extra_window.geometry('800x800')
-      
-
 
 window =tk.Tk()
 window.geometry('500x500')
@@ -173,14 +91,6 @@ button1= tk.Button(window,text='COUNTDOWN',command=count,font=("Arial",19,"bold"
 button1.pack(expand=True)
 
 
-button2= tk.Button(window,text='STOPWATCH',command=stop,font=("Arial",19,"bold"),bg="purple")
-button2.pack(expand=True)
-
-button3 = tk.Button(window,text='USER INTERFACE',command=user,font=("Arial",19,"bold"),bg="purple")
-button3.pack(expand=True)
-
-button4 = tk.Button(window,text='Accuracy',command=accuracy,font=("Arial",19,"bold"),bg="purple")
-button4.pack(expand=True)
 
 
 
